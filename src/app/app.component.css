@@ -48,3 +48,36 @@ input {
   padding: 5px;
   margin: 0px 10px;
 }
+
+.container {
+  margin: 30px;
+  padding: 40px;
+  border: black solid 6px;
+  background-color: white;
+  overflow: hidden;
+  height: 100%;
+}
+
+.display {
+  border: black solid 4px;
+  height: 90%;
+  background-color: white;
+
+
+}
+
+.first {
+  display: block;
+  padding: 10px;
+  margin: 20px;
+  border: black solid 2px;
+  height: 10vh;
+  background-color: rgb(197, 197, 197);
+
+
+
+}
+
+.minifilm {
+  border: black solid 2px;
+}
