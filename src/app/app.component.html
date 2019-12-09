@@ -18,16 +18,20 @@
   </div>
   <div class="display">
     <ul>
-      <li class="first">Tytuł filmu
+      <!-- <li class="first">
+        <h1>Tytuł filmu: </h1>
+        <button>Uruchomienie filmu</button>
+        <div class="minifilm">Miniatura filmu</div>
+        <button>usunięcie filmu</button>
+        <button>dodanie do ulubionych</button>
+      </li> -->
+      <li *ngFor="let task of tasksList" class="first">Link do filmu: {{task}}
         <button>Uruchomienie filmu</button>
         <div class="minifilm">Miniatura filmu</div>
         <button>usunięcie filmu</button>
         <button>dodanie do ulubionych</button>
       </li>
-      <li class="first">kolejny film</li>
-      <li class="first">kolejny film</li>
-      <li class="first">kolejny film</li>
-      <li class="first">kolejny film</li>
+
 
     </ul>
   </div>

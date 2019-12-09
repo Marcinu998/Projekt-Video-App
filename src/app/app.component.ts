@@ -12,6 +12,8 @@ export class AppComponent {
 
   add() {
     this.tasksList.push(this.newTask);
+    this.newTask = '';
+    console.log(this.tasksList);
   }
 
 }
