@@ -17,22 +17,33 @@
     <button class="listview">Lista</button>
   </div>
   <div class="display">
-    <ul>
-      <!-- <li class="first">
+    <ng-container *ngIf="tasksList.length > 0; else noTask">
+      <ul>
+        <!-- <li class="first">
         <h1>Tytuł filmu: </h1>
         <button>Uruchomienie filmu</button>
         <div class="minifilm">Miniatura filmu</div>
         <button>usunięcie filmu</button>
         <button>dodanie do ulubionych</button>
       </li> -->
-      <li *ngFor="let task of tasksList" class="first">Link do filmu: {{task}}
-        <button>Uruchomienie filmu</button>
-        <div class="minifilm">Miniatura filmu</div>
-        <button>usunięcie filmu</button>
-        <button>dodanie do ulubionych</button>
-      </li>
+        <li *ngFor="let task of tasksList" class="first">Link do filmu: {{task}}
+          <button>Uruchomienie filmu</button>
+          <div class="minifilm">Miniatura filmu</div>
+          <button (click)="remove(task)">Usuń</button>
+          <button (click)="favorite(task)">Ulubione</button>
+        </li>
+      </ul>
+    </ng-container>
+    <ng-template #noTask>
+      <p>W tym miejscu pojawią się twoje filmy.</p>
+    </ng-template>
+  </div>
 
-
+  <div class="favoriteList">
+    <p> Luczba ulubionych filmów: {{tasksFavorite.length}} </p>
+    <ul>
+      <li *ngFor="let task of tasksFavorite">{{task}}</li>
     </ul>
   </div>
+
 </section>
