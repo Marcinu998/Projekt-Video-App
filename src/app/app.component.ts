@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'VideoApp';
+  newTask: string;
+  tasksList: Array<string> = [];
+
+  add() {
+    this.tasksList.push(this.newTask);
+  }
 
 }
