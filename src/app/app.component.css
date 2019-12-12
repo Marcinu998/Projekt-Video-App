@@ -1,5 +1,5 @@
 .title {
-  color: rgb(255, 202, 123);
+  color: rgb(255, 162, 22);
   font-size: 70px;
   display: flex;
   justify-content: center;
@@ -12,7 +12,7 @@
   padding: 30px;
 }
 
-.addfilm {
+.add-movie {
   font-size: 25px;
   width: 20vh;
   color: black;
@@ -25,21 +25,21 @@ input {
   margin: 0px 10px;
 }
 
-.film {
+.movie {
   display: flex;
   justify-content: center;
-  color: black;
+  color: rgb(255, 162, 22);
   font-size: 20px;
 }
 
-.filterfilm {
+.filtr-movie {
   font-size: 20px;
   width: 15vw;
   padding: 5px;
   margin: 0px 10px;
 }
 
-.sortfilm {
+.sort-movie {
   font-size: 20px;
   width: 15vw;
   padding: 5px;
@@ -50,7 +50,7 @@ input {
   margin: 5% 10%;
   padding: 20px;
   border: 6px solid black;
-  background-color: white;
+  background-color: rgb(255, 253, 231);
   overflow: hidden;
   min-height: 40%;
 
@@ -70,7 +70,7 @@ input {
   width: 5vw;
 }
 
-.listview {
+.list-view {
   font-size: 20px;
   width: 5vw;
 }
@@ -89,10 +89,10 @@ li {
   margin: 20px;
   border: 2px solid black;
   height: 10vh;
-  background-color: rgb(197, 197, 197);
+  background-color: rgb(255, 253, 231);
 }
 
-.minifilm {
+.mini-movie {
   border: black solid 2px;
   position: relative;
   left: 85%;
