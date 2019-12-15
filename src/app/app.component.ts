@@ -11,6 +11,7 @@ export class AppComponent {
   films: Array<string> = [];
   tasksFavorite: Array<string> = [];
 
+
   add() {
     this.films.push(this.newTask);
     this.newTask = '';
@@ -24,5 +25,4 @@ export class AppComponent {
     this.tasksFavorite.push(task);
     this.remove(task);
   }
-
 }
