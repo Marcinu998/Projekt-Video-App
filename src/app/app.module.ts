@@ -4,9 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { MyMoviesComponent } from './my-movies/my-movies.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MyMoviesComponent
   ],
   imports: [
     BrowserModule,
