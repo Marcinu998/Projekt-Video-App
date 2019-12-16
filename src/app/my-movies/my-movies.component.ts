@@ -11,8 +11,6 @@ export class MyMoviesComponent implements OnInit {
   message = new TemplateMessage();
   sorts = [' ', 'Najstarsze filmy', 'Ostatnio dodane filmy'];
 
-  constructor() { }
-
   ngOnInit() { }
 
 }
