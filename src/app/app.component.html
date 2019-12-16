@@ -1,8 +1,7 @@
 <div class="title">Video App</div>
 
 <div class="search">
-  <button class="add-movie" (click)="add()">Dodaj Film</button>
-  <input [(ngModel)]="newTask">
+  <app-movie-search (emitTask)="add($event)"></app-movie-search>
 </div>
 
 <div class="movie">
@@ -47,10 +46,8 @@
         <button>Uruchomienie filmu</button>
         <div class="mini-movie">Miniatura Filmu</div>
         <button (click)="remove(tasksFavorite)">Usuń</button>
-
       </li>
     </ul>
-
   </div>
 
 </section>

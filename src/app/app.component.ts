@@ -7,14 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'VideoApp';
-  newTask: string;
   films: Array<string> = [];
   tasksFavorite: Array<string> = [];
 
 
-  add() {
-    this.films.push(this.newTask);
-    this.newTask = '';
+  add(film: string) {
+    this.films.push(film);
   }
 
   remove(task: string) {
