@@ -1,0 +1,18 @@
+.view {
+  position: relative;
+  left: 85%;
+  margin: 10px;
+  width: 10vw;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+.tiles {
+  font-size: 20px;
+  width: 5vw;
+}
+
+.list-view {
+  font-size: 20px;
+  width: 5vw;
+}

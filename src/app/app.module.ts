@@ -8,13 +8,15 @@ import { MyMoviesComponent } from './my-movies/my-movies.component';
 import { MovieSearchComponent } from './movie-search/movie-search.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.component';
+import { ListViewComponent } from './list-view/list-view.component';
 @NgModule({
   declarations: [
     AppComponent,
     MyMoviesComponent,
     MovieSearchComponent,
     MovieListComponent,
-    FavoriteMoviesComponent
+    FavoriteMoviesComponent,
+    ListViewComponent
   ],
   imports: [
     BrowserModule,

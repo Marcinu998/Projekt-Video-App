@@ -6,10 +6,7 @@
   <app-my-movies></app-my-movies>
 </div>
 <section class="container">
-  <div class="view">
-    <button class="tiles">Kafelki</button>
-    <button class="list-view">Lista</button>
-  </div>
+  <app-list-view></app-list-view>
   <div class="display">
     <ng-container *ngIf="films.length > 0; else noTask">
       <ul>
