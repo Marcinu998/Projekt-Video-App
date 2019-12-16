@@ -1,0 +1,20 @@
+.movie {
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 162, 22);
+  font-size: 25px;
+  margin: 10px;
+
+}
+
+.filtr-movie {
+  font-size: 20px;
+  width: 15vw;
+  margin: 0px 10px;
+}
+
+.delete-videos {
+  font-size: 20px;
+  width: 15vw;
+  margin: 0px 10px;
+}
