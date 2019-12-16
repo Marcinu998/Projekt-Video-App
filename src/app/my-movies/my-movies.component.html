@@ -2,7 +2,6 @@
   <p>Moje filmy: </p>
   <button class="filtr-movie">Ulubione filmy</button>
   <button class="delete-videos">Usuń wszystkie filmy</button>
-
   <label for="sort">Sortuj:</label>
   <select [(ngModel)]="message.sort" id="sort" name="sort">
     <option *ngFor="let sort of sorts" [value]="sort">{{sort}}</option>
