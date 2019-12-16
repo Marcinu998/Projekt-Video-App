@@ -9,7 +9,7 @@ import { NgForm } from '@angular/forms';
 export class MyMoviesComponent implements OnInit {
 
   message = new TemplateMessage();
-  sorts = ['- - -', 'Najstarsze filmy', 'Ostatnio dodane filmy'];
+  sorts = [' ', 'Najstarsze filmy', 'Ostatnio dodane filmy'];
 
   constructor() { }
 

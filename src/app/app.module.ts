@@ -5,10 +5,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { MyMoviesComponent } from './my-movies/my-movies.component';
+import { MovieSearchComponent } from './movie-search/movie-search.component';
+import { MovieListComponent } from './movie-list/movie-list.component';
+import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MyMoviesComponent
+    MyMoviesComponent,
+    MovieSearchComponent,
+    MovieListComponent,
+    FavoriteMoviesComponent
   ],
   imports: [
     BrowserModule,
