@@ -8,7 +8,9 @@ import { MyMoviesComponent } from './my-movies/my-movies.component';
 import { MovieSearchComponent } from './movie-search/movie-search.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.component';
+import { HttpClientModule } from '@angular/common/http';
 import { ListViewComponent } from './list-view/list-view.component';
+import { MovieService } from './app.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,9 +23,12 @@ import { ListViewComponent } from './list-view/list-view.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    MovieService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
