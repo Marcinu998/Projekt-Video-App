@@ -15,7 +15,7 @@ export class MovieService {
   ) { }
 
   public add(filmId: string) {
-    //i6MBmO2HP3w
+    // i6MBmO2HP3w
     const key = 'AIzaSyDIO28DsqeiOKyuNJeVc0dLVnx6LUdYz_U';
     const responseObservable = this.httpClient.get(`https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${filmId}&key=${key}`);
     responseObservable.pipe( // how to send query params in agular
@@ -27,6 +27,7 @@ export class MovieService {
         id: filmId,
         title: res.items[0].snippet.title,
         src: this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${filmId}`),
+
       };
       this.films.push(newFilm);
     });

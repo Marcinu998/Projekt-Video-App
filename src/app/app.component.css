@@ -14,3 +14,7 @@
   overflow: hidden;
   min-height: 40%;
 }
+
+FilmId {
+  width: vw;
+}
