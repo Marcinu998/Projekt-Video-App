@@ -1,12 +1,12 @@
 <div class="display">
   <ng-container *ngIf="films?.length > 0; else noTask">
     <ul>
-      <li *ngFor="let task of films" class="first">Link do filmu: {{task.title}}
+      <li *ngFor="let task of films" class="first">Link do filmu: {{task.title}} <br>
         <button>Uruchomienie filmu</button>
-        <div class="mini-movie">Miniatura Filmu</div>
+        <iframe width="120" height="90" [src]="task.src" frameborder="0" allowfullscreen></iframe>
         <button (click)="remove(task.id)">Usuń</button>
         <button (click)="favorite(task.id)">Ulubione</button>
-        <iframe width="560" height="315" [src]="task.src" frameborder="0" allowfullscreen></iframe>
+
       </li>
     </ul>
   </ng-container>
