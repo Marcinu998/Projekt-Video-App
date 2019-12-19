@@ -10,7 +10,7 @@ import { Movie } from './app.interfaces';
 export class AppComponent implements OnInit {
   title = 'VideoApp';
   films: Movie[] = [];
-  tasksFavorite: Array<string> = [];
+  filmsFavorite: Array<string> = [];
 
   constructor(private movieService: MovieService) { }
 
@@ -29,9 +29,9 @@ export class AppComponent implements OnInit {
     this.films = this.movieService.getFilms();
   }
 
-  favorite(task: string) {
-    this.tasksFavorite.push(task);
-    this.remove(task);
+  favorite(film: string) {
+    this.filmsFavorite.push(film);
+    this.remove(film);
   }
 
   // removeFavourite(filmId: Film) {

@@ -1,10 +1,10 @@
 <div class="favorite-List">
-  <p>Liczba ulubionych filmów: {{tasksFavorite.length}} </p>
+  <p>Liczba ulubionych filmów: {{filmsFavorite.length}} </p>
   <ul>
-    <li *ngFor="let task of tasksFavorite">{{task}}
+    <li *ngFor="let film of filmsFavorite">Link do filmu: {{film}}
       <button>Uruchomienie filmu</button>
-      <div class="mini-movie">Miniatura Filmu</div>
-      <button (click)="remove(task)">Usuń</button>
+      <!-- <div class="mini-movie">Miniatura Filmu</div> -->
+      <button (click)="remove(film)">Usuń</button>
     </li>
   </ul>
 </div>
