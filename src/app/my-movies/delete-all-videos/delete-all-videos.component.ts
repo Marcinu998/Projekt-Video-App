@@ -17,8 +17,12 @@ export class DeleteAllVideosComponent implements OnInit {
 
   ngOnInit() {
   }
+  // remove(film: string) {
+  //   this.filmsRemove = this.filmsRemove.filter(e => e !== film);
+  //   console.log(this.remove);
+  // }
   remove(filmId: string) {
-    this.filmsRemove = this.filmsRemove.filter(e => e !== filmId);
+    this.emitRemove.emit(filmId);
     console.log(this.remove);
   }
 }
