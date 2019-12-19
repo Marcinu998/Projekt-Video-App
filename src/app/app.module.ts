@@ -11,6 +11,7 @@ import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.compo
 import { HttpClientModule } from '@angular/common/http';
 import { ListViewComponent } from './list-view/list-view.component';
 import { MovieService } from './app.service';
+import { DeleteAllVideosComponent } from './my-movies/delete-all-videos/delete-all-videos.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MovieService } from './app.service';
     MovieSearchComponent,
     MovieListComponent,
     FavoriteMoviesComponent,
-    ListViewComponent
+    ListViewComponent,
+    DeleteAllVideosComponent
   ],
   imports: [
     BrowserModule,
