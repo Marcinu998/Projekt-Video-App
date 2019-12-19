@@ -13,6 +13,7 @@ export class MovieListComponent implements OnInit {
   emitRemove = new EventEmitter<string>();
   @Output()
   emitFavorite = new EventEmitter<string>();
+  filmsFavorite: any;
 
 
   constructor() { }
@@ -20,10 +21,11 @@ export class MovieListComponent implements OnInit {
   ngOnInit() {
   }
 
-  remove(task: string) {
-    this.emitRemove.emit(task);
+  remove(film: string) {
+    this.emitRemove.emit(film);
   }
-  favorite(task: string) {
-    this.emitFavorite.emit(task);
+  favorite(film: string) {
+    this.emitFavorite.emit(film);
+    console.log(this.favorite);
   }
 }

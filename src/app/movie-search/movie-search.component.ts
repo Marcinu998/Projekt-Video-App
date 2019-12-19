@@ -19,5 +19,6 @@ export class MovieSearchComponent implements OnInit {
   add() {
     this.emitTask.emit(this.newTask);
     this.newTask = '';
+    console.log(this.emitTask);
   }
 }
