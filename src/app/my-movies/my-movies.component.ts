@@ -1,11 +1,10 @@
-import { Component, OnInit, } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
-
   selector: 'app-my-movies',
   templateUrl: './my-movies.component.html',
-  styleUrls: ['./my-movies.component.css'],
+  styleUrls: ['./my-movies.component.css']
 })
 
 export class MyMoviesComponent implements OnInit {
@@ -16,7 +15,6 @@ export class MyMoviesComponent implements OnInit {
   ngOnInit() { }
 
 }
-
 class TemplateMessage {
   constructor(
     public sort = '',

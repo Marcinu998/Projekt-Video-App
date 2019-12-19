@@ -11,7 +11,7 @@ import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.compo
 import { HttpClientModule } from '@angular/common/http';
 import { ListViewComponent } from './list-view/list-view.component';
 import { MovieService } from './app.service';
-import { AppRoutingModule } from './app.routing.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,8 +25,7 @@ import { AppRoutingModule } from './app.routing.module';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule,
-    AppRoutingModule
+    HttpClientModule
   ],
   providers: [
     MovieService,
