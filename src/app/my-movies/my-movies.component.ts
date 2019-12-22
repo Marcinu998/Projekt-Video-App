@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -12,8 +12,26 @@ export class MyMoviesComponent implements OnInit {
   message = new TemplateMessage();
   sorts = ['Najstarsze filmy', 'Ostatnio dodane filmy'];
 
-  ngOnInit() { }
+  @Input()
+  filmsRemove: Array<string> = [];
 
+  @Output()
+  emitRemove = new EventEmitter<string>();
+  emitRemoveAll = new EventEmitter<string>();
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  // remove(filmId: string) {
+  //   this.emitRemove.emit(filmId);
+  //   console.log(this.remove);
+  // }
+  removeAll(filmId: string) {
+    this.emitRemove.emit(filmId);
+    console.log(this.removeAll);
+  }
 }
 class TemplateMessage {
   constructor(
