@@ -16,7 +16,7 @@ export class MyMoviesComponent implements OnInit {
   filmsRemove: Array<string> = [];
 
   @Output()
-  emitRemove = new EventEmitter<string>();
+  // emitRemove = new EventEmitter<string>();
   emitRemoveAll = new EventEmitter<string>();
 
   constructor() { }
@@ -28,8 +28,8 @@ export class MyMoviesComponent implements OnInit {
   //   this.emitRemove.emit(filmId);
   //   console.log(this.remove);
   // }
-  removeAll(filmId: string) {
-    this.emitRemove.emit(filmId);
+  removeAll(filmsRemove: string) {
+    this.emitRemoveAll.emit(filmsRemove);
     console.log(this.removeAll);
   }
 }
