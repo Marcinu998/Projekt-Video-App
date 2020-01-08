@@ -8,5 +8,7 @@
 <section class="container">
   <app-list-view></app-list-view>
   <app-movie-list [films]="films" (emitRemove)="remove($event)" (emitFavorite)="favorite($event)"></app-movie-list>
-  <app-favorite-movies [filmsFavorite]="filmsFavorite" (emitRemove)="remove($event)"></app-favorite-movies>
 </section>
+<div class="favorite-movies">
+  <app-favorite-movies [filmsFavorite]="filmsFavorite" (emitRemove)="remove($event)"></app-favorite-movies>
+</div>
