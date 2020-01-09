@@ -4,16 +4,17 @@
   color: rgb(255, 162, 22);
   font-size: 25px;
   margin: 10px;
+
 }
 
-.filtr-movie {
+select {
   font-size: 20px;
-  width: 15vw;
+  width: 20vw;
   margin: 0px 10px;
 }
 
 .delete-videos {
   font-size: 20px;
-  width: 15vw;
+  width: 20vw;
   margin: 0px 10px;
 }

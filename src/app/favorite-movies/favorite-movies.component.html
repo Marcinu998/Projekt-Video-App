@@ -1,4 +1,4 @@
-<div class="favorite-List">
+<div ng-show="movie" class="favorite-List">
   <p>Liczba ulubionych filmów: {{filmsFavorite.length}} </p>
   <ul>
     <li *ngFor="let film of filmsFavorite">Link do filmu: {{film}}

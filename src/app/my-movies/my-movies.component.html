@@ -1,10 +1,12 @@
 <div class="movie">
   <option *ngFor="let film of filmsRemove"></option>
   <p>Moje filmy:</p>
-  <button class="filtr-movie">Ulubione filmy</button>
+  <!-- <button type="checkbox" class="filtr-movie">Ulubione filmy</button> -->
   <button class="delete-videos" (click)="removeAll(filmsRemove)">Usuń wszystkie filmy</button>
   <label for="sort"> Sortuj: </label>
   <select [(ngModel)]="message.sort" id="sort" name="sort">
     <option *ngFor="let sort of sorts" [value]="sort">{{sort}}</option>
   </select>
+  <br>
+  <p>Ulubione filmy: <input type="checkbox" ng-model="movie"></p>
 </div>
