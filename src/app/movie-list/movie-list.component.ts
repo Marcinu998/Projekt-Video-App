@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-movie-list',
@@ -14,6 +15,7 @@ export class MovieListComponent implements OnInit {
   @Output()
   emitFavorite = new EventEmitter<string>();
   filmsFavorite: any;
+  today = new Date();
 
 
   constructor() { }
@@ -25,7 +27,11 @@ export class MovieListComponent implements OnInit {
     this.emitRemove.emit(film);
   }
   favorite(film: string) {
+
     this.emitFavorite.emit(film);
     console.log(this.favorite);
+  }
+  add(today: string) {
+    this.today.toLocaleDateString();
   }
 }

@@ -2,6 +2,8 @@
   <ng-container *ngIf="films?.length > 0; else noTask">
     <ul>
       <li *ngFor="let film of films" class="first">Link do filmu: {{film.title}} <br>
+        <!-- <p>data dodania:: {{date}}</p> -->
+        <p>data dodania:: {{today | date:'HH:mm:ss'}}</p>
         <button>Uruchomienie filmu</button>
         <iframe width="120" height="90" [src]="film.src" frameborder="0" allowfullscreen></iframe>
         <button (click)="remove(film.id)">Usuń</button>
