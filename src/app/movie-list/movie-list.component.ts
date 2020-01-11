@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { formatDate } from '@angular/common';
+// import { formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-movie-list',
@@ -27,7 +27,6 @@ export class MovieListComponent implements OnInit {
     this.emitRemove.emit(film);
   }
   favorite(film: string) {
-
     this.emitFavorite.emit(film);
     console.log(this.favorite);
   }
