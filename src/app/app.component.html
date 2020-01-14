@@ -1,6 +1,6 @@
 <div class="title">Video App</div>
 <div>
-  <app-movie-search (emitTask)="add($event)"></app-movie-search>
+  <app-movie-search (emitFilm)="add($event)"></app-movie-search>
 </div>
 <div>
   <app-my-movies [filmsRemove]="films" (emitRemoveAll)="removeAll($event)"> </app-my-movies>

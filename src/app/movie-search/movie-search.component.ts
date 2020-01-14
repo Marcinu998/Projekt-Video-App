@@ -7,9 +7,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class MovieSearchComponent implements OnInit {
 
-  newTask: string;
+  newFilm: string;
   @Output()
-  emitTask = new EventEmitter<string>();
+  emitFilm = new EventEmitter<string>();
 
   constructor() { }
 
@@ -17,8 +17,8 @@ export class MovieSearchComponent implements OnInit {
   }
 
   add() {
-    this.emitTask.emit(this.newTask);
-    this.newTask = '';
-    console.log(this.emitTask);
+    this.emitFilm.emit(this.newFilm);
+    this.newFilm = '';
+    console.log(this.emitFilm);
   }
 }
