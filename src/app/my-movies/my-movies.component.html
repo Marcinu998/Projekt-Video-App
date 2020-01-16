@@ -7,6 +7,7 @@
   <select [(ngModel)]="message.sort" id="sort" name="sort">
     <option *ngFor="let sort of sorts" [value]="sort">{{sort}}</option>
   </select>
-  <br>
   <p>Ulubione filmy: <input type="checkbox" ng-model="movie"></p>
+  <br>
+  <button class="databaseMovie">Baza zapisanych Filmów </button>
 </div>
