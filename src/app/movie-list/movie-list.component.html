@@ -1,7 +1,7 @@
-<div class="display">
+<div class="displayList">
   <ng-container *ngIf="films?.length > 0; else noTask">
-    <ul>
-      <li *ngFor="let film of films" class="first">Link do filmu: {{film.title}} <br>
+    <ul class="display">
+      <li *ngFor="let film of films" class="first">Tytuł: {{film.title}} <br>
         <button>Uruchomienie filmu</button>
         <iframe width="120" height="90" [src]="film.src" frameborder="0" allowfullscreen></iframe>
         <button (click)="remove(film.id)">Usuń</button>
