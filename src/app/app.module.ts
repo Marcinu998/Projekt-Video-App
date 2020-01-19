@@ -11,6 +11,7 @@ import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.compo
 import { HttpClientModule } from '@angular/common/http';
 import { ListViewComponent } from './list-view/list-view.component';
 import { MovieService } from './app.service';
+import { MovieBaseComponent } from './movie-base/movie-base.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MovieService } from './app.service';
     MovieListComponent,
     FavoriteMoviesComponent,
     ListViewComponent,
+    MovieBaseComponent,
 
   ],
   imports: [

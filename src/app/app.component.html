@@ -10,5 +10,6 @@
   <app-movie-list [films]="films" (emitRemove)="remove($event)" (emitFavorite)="favorite($event)"></app-movie-list>
 </section>
 <div class="favorite-movies">
+  <app-movie-base></app-movie-base>
   <app-favorite-movies [filmsFavorite]="filmsFavorite" (emitRemove)="remove($event)"></app-favorite-movies>
 </div>
