@@ -12,16 +12,13 @@ export class FavoriteMoviesComponent implements OnInit {
   @Output()
   emitRemove = new EventEmitter<string>();
 
-  // movieService: any;
-  // films: any;
-
   constructor() { }
 
   ngOnInit() {
   }
 
-  remove(filmId: string) {
-    this.filmsFavorite = this.filmsFavorite.filter(e => e !== filmId);
+  remove(filmsFavorite: string) {
+    this.emitRemove.emit(filmsFavorite);
     console.log(this.remove);
   }
 
