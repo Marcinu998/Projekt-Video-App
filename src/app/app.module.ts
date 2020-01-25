@@ -9,7 +9,6 @@ import { MovieSearchComponent } from './movie-search/movie-search.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ListViewComponent } from './list-view/list-view.component';
 import { MovieService } from './app.service';
 import { MovieBaseComponent } from './movie-base/movie-base.component';
 
@@ -20,9 +19,7 @@ import { MovieBaseComponent } from './movie-base/movie-base.component';
     MovieSearchComponent,
     MovieListComponent,
     FavoriteMoviesComponent,
-    ListViewComponent,
     MovieBaseComponent,
-
   ],
   imports: [
     BrowserModule,
