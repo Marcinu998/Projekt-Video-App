@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -10,7 +9,6 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieService } from './app.service';
-import { MovieBaseComponent } from './movie-base/movie-base.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +17,6 @@ import { MovieBaseComponent } from './movie-base/movie-base.component';
     MovieSearchComponent,
     MovieListComponent,
     FavoriteMoviesComponent,
-    MovieBaseComponent,
   ],
   imports: [
     BrowserModule,
