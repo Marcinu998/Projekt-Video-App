@@ -1,53 +1,9 @@
 .displayList {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  align-items: stretch;
-  align-content: stretch;
   border: 4px solid black;
   height: 450px;
   background-color: white;
-}
-
-.display {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  /* position: static; */
-  overflow: hidden;
-  height: 400px;
-  flex-basis: 100%;
-}
-
-
-.first {
-  display: flex;
-  display: block;
-  margin: 15px;
-  border: 2px solid black;
-  background-color: rgb(255, 253, 231);
-  font-size: 15px;
-  overflow: hidden;
-  height: 22vh;
-  width: 20vw;
-}
-
-iframe {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  overflow: hidden;
-}
-
-.view {
-  position: relative;
-  left: 82%;
-  margin: 5px;
-  width: 12vw;
-  /* border: 2px solid black; */
-  overflow: hidden;
-  height: 4vh;
 }
 
 .tiles {
@@ -58,4 +14,77 @@ iframe {
 .list-view {
   font-size: 20px;
   width: 5vw;
+}
+
+.list {
+  background-color: tomato;
+}
+
+.list-wrapper {
+  display: flex;
+  background-color: white;
+  flex-basis: 100%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+}
+
+.list-film {
+  background-color: rgb(255, 248, 155);
+  padding: 10px;
+  margin: 10px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border: 1px solid black;
+  height: 13vh;
+}
+
+.grid-wrapper {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  height: 90%;
+  overflow: hidden;
+}
+
+.grid-film {
+  background-color: rgb(255, 248, 155);
+  padding: 10px;
+  margin: 10px;
+  display: block;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  border: 1px solid black;
+  overflow: hidden;
+  height: 17vh;
+  width: 25vw;
+  flex-basis: 45%;
+}
+
+iframe {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  left: 60%;
+}
+
+.view {
+  position: relative;
+  left: 82%;
+  margin: 5px;
+  width: 12vw;
+  overflow: hidden;
+  height: 4vh;
 }

@@ -1,7 +1,12 @@
-<div class="displayList">
+<div (change)="toggleView($event)" class="displayList">
+  <div class="view">
+    <button class="tiles" (click)="setDisplay('grid')">Kafelki</button>
+    <button class="list-view" (click)="setDisplay('list')">Lista</button>
+  </div>
   <ng-container *ngIf="films?.length > 0; else noTask">
-    <ul class="display">
-      <li *ngFor="let film of films" class="first">Tytuł: {{film.title}} <br>
+    <ul [ngClass]="[ display === 'list' ? 'list-wrapper' : 'grid-wrapper']">
+      <li *ngFor="let film of films" [ngClass]="[ display === 'list' ? 'list-film' : 'grid-film']"> Tytuł:
+        {{film.title}}
         <button>Uruchomienie filmu</button>
         <iframe width="120" height="90" [src]="film.src" frameborder="0" allowfullscreen></iframe>
         <button (click)="remove(film.id)">Usuń</button>
