@@ -3,3 +3,8 @@ export interface Movie {
   title: string;
   createdAt: any;
 }
+
+export interface NewFilmData {
+  type: 'youtube' | 'vimeo';
+  id: string;
+}
