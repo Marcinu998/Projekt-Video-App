@@ -11,7 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MovieService } from './app.service';
 import { SharedComponent } from './shared/shared.component';
 import { SortDatePipe } from './shared/sort-date.pipe';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +26,8 @@ import { SortDatePipe } from './shared/sort-date.pipe';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [
     MovieService,
