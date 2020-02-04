@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { MatButtonToggleChange } from '@angular/material';
+
 // import { formatDate } from '@angular/common';
 
 @Component({
@@ -7,7 +9,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./movie-list.component.css']
 })
 export class MovieListComponent implements OnInit {
-
+  toggle: true;
+  display = 'list';
 
   @Input()
   films = [];
@@ -17,9 +20,19 @@ export class MovieListComponent implements OnInit {
   emitFavorite = new EventEmitter<string>();
   filmsFavorite: any;
 
-  constructor() { }
+  constructor() {
+    for (let i = 1; i <= 100; i++) {
+      this.films.push(`film ${i}`);
+    }
+  }
 
   ngOnInit() {
+  }
+  toggleView(change: MatButtonToggleChange) {
+    this.toggle = change.value;
+  }
+  setDisplay(display: 'grid' | 'list'): void {
+    this.display = display;
   }
 
   remove(film: string) {
