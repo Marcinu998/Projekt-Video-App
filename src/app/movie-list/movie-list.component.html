@@ -10,6 +10,7 @@
         Tytuł: {{film.title}},<br>
         Liczba odtworzeń: {{film.statistics}}, <br>
         Liczba polubień: {{film.likeCount}}, <br>
+        Data dodania do biblioteki: {{film.createdAt}}, <br>
         <button>Uruchomienie filmu</button>
         <iframe width="120" height="90" [src]="film.src" frameborder="0" allowfullscreen></iframe>
         <button (click)="remove(film.id)">Usuń</button>
