@@ -9,8 +9,6 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieService } from './app.service';
-import { SharedComponent } from './shared/shared.component';
-import { SortDatePipe } from './shared/sort-date.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
@@ -19,8 +17,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
     MovieSearchComponent,
     MovieListComponent,
     FavoriteMoviesComponent,
-    SharedComponent,
-    SortDatePipe,
   ],
   imports: [
     BrowserModule,
