@@ -3,7 +3,8 @@
   <app-movie-search (emitFilm)="add($event)" (emitLoadDemo)="load()"> </app-movie-search>
 </div>
 <div>
-  <app-my-movies [filmsRemove]="films" (emitRemoveAll)="removeAll($event)"> </app-my-movies>
+  <app-my-movies [filmsRemove]="films" (emitRemoveAll)="removeAll($event)" (emitSortFilm)="sortFilm($event)">
+  </app-my-movies>
 </div>
 <section class="container">
   <app-movie-list [films]="films" (emitRemove)="remove($event)" (emitFavorite)="favorite($event)"></app-movie-list>
