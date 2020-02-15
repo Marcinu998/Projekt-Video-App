@@ -9,6 +9,13 @@ import { MatButtonToggleChange } from '@angular/material';
   styleUrls: ['./movie-list.component.css']
 })
 export class MovieListComponent implements OnInit {
+  [x: string]: any;
+
+  constructor() {
+    for (let i = 1; i <= 100; i++) {
+      this.films.push(`film ${i}`);
+    }
+  }
   toggle: true;
   display = 'list';
 
@@ -19,12 +26,6 @@ export class MovieListComponent implements OnInit {
   @Output()
   emitFavorite = new EventEmitter<string>();
   filmsFavorite: any;
-
-  constructor() {
-    for (let i = 1; i <= 100; i++) {
-      this.films.push(`film ${i}`);
-    }
-  }
 
   ngOnInit() {
   }
@@ -37,6 +38,7 @@ export class MovieListComponent implements OnInit {
 
   remove(film: string) {
     this.emitRemove.emit(film);
+    console.log(this.remove);
   }
   favorite(film: string) {
     this.emitFavorite.emit(film);
@@ -44,3 +46,4 @@ export class MovieListComponent implements OnInit {
   }
 
 }
+
