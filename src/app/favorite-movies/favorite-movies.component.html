@@ -1,9 +1,9 @@
 <div ng-show="movie" class="favorite-List">
-  <p>Liczba ulubionych filmów: {{filmsFavorite.length}} </p>
+  <p>Liczba ulubionych filmów: {{films.length}} </p>
   <ul>
-    <li *ngFor="let film of filmsFavorite">Link do filmu: {{film}}
-      <button>Uruchomienie filmu</button>
-      <button (click)="remove()">Usuń</button>
+    <li *ngFor="let film of films">Tytuł: {{film.id}},<br>
+      <button>Obejrzyj</button>
+      <button (click)="remove(film)">Usuń</button>
     </li>
   </ul>
 </div>

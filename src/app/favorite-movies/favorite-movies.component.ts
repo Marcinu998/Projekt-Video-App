@@ -7,18 +7,28 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class FavoriteMoviesComponent implements OnInit {
 
+  // filmsRemoveFavorite: Array<string> = [];
+
   @Input()
   filmsFavorite: Array<string> = [];
+  @Input()
+  films = [];
   @Output()
-  emitRemove = new EventEmitter<string>();
+  emitRemoveFavorite = new EventEmitter<string>();
+  // @Output()
+  // removeFilmsFavorite: Array<string>[];
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  remove(filmsFavorite: string) {
-    this.emitRemove.emit(filmsFavorite);
+  // removeFavorite(filmsRemoveFavorite: string) {
+  //   this.emitRemoveFavorite.emit(filmsRemoveFavorite);
+  //   console.log(this.removeFavorite);
+  // }
+  remove(film: string) {
+    this.emitRemoveFavorite.emit(film);
     console.log(this.remove);
   }
 
