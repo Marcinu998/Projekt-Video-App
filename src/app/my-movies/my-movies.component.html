@@ -1,7 +1,7 @@
 <div class="movie">
   <option *ngFor="let film of filmsRemove"></option>
   <p>Moje filmy: </p>
-  <button class="delete-videos" (click)="removeAll(filmsRemove)">Usuń wszystkie filmy</button>
+  <button mat-raised-button class="delete-videos" (click)="removeAll(filmsRemove)">Usuń wszystkie filmy</button>
   <label for="sort"> Sortuj: </label>
   <select (change)="sortFilm($event.target.value)" id="sort" name="sort">
     <option *ngFor="let sort of sorts" (click)="sortFilm(sort)" [value]="sort">{{sort}}</option>

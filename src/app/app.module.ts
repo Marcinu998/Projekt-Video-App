@@ -10,6 +10,8 @@ import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.compo
 import { HttpClientModule } from '@angular/common/http';
 import { MovieService } from './app.service';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatButtonModule } from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatSliderModule,
+    MatButtonModule,
   ],
   providers: [
     MovieService,

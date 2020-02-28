@@ -2,8 +2,8 @@
   <p>Liczba ulubionych filmów: {{films.length}} </p>
   <ul>
     <li *ngFor="let film of films">Tytuł: {{film.id}},<br>
-      <button>Obejrzyj</button>
-      <button (click)="remove(film)">Usuń</button>
+      <button mat-raised-button>Obejrzyj</button>
+      <button mat-raised-button (click)="remove(film)">Usuń</button>
     </li>
   </ul>
 </div>
