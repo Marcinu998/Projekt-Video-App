@@ -1,6 +1,7 @@
 <div class="title">Video App</div>
 <div>
   <app-movie-search (emitFilm)="add($event)" (emitLoadDemo)="load()"> </app-movie-search>
+  <!-- <mat-slider min="1" max="100" step="1" value="1"></mat-slider> -->
 </div>
 <div>
   <app-my-movies [filmsRemove]="films" (emitRemoveAll)="removeAll($event)" (emitSortFilm)="sortFilm($event)">
@@ -10,5 +11,5 @@
   <app-movie-list [films]="films" (emitRemove)="remove($event)" (emitFavorite)="favorite($event)"></app-movie-list>
 </section>
 <div class="favorite-movies">
-  <app-favorite-movies [filmsFavorite]="filmsFavorite" (emitRemove)="remove($event)"></app-favorite-movies>
+  <app-favorite-movies [films]="filmsFavorite" (emitRemoveFavorite)="remove($event)"></app-favorite-movies>
 </div>
