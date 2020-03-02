@@ -14,23 +14,21 @@ export class FavoriteMoviesComponent implements OnInit {
   @Input()
   films = [];
   @Output()
-  emitRemoveFavorite = new EventEmitter<string>();
-  // @Output()
-  // removeFilmsFavorite: Array<string>[];
+  emitRemoveFromFavorite = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  // removeFavorite(filmsRemoveFavorite: string) {
-  //   this.emitRemoveFavorite.emit(filmsRemoveFavorite);
-  //   console.log(this.removeFavorite);
-  // }
-  remove(film: string) {
-    this.emitRemoveFavorite.emit(film);
-    console.log(this.remove);
+  removeFromFavorite(films: string) {
+    this.emitRemoveFromFavorite.emit(films);
+    console.log(this.removeFromFavorite);
   }
+  // remove(film: string) {
+  //   this.emitRemoveFavorite.emit(film);
+  //   console.log(this.remove);
+  // }
 
 }
 
