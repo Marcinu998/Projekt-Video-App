@@ -8,12 +8,24 @@
 
 .tiles {
   font-size: 20px;
-  width: 7vw;
+  /* width: 7vw; */
+  background-color: black;
+  color: white;
+  margin: 2px;
 }
+
+/* .buttonLook {
+  height: 20%;
+  color: teal;
+} */
 
 .list-view {
   font-size: 20px;
-  width: 5vw;
+  /* width: 5vw; */
+  background-color: black;
+  color: white;
+  margin: 2px;
+  /* text-align: center; */
 }
 
 .list {
@@ -35,13 +47,16 @@
 }
 
 .list-film {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   background-color: rgb(255, 248, 155);
   padding: 5px;
   margin: 5px;
-  flex-direction: row;
-  flex-wrap: nowrap;
   border: 1px solid black;
   height: 19vh;
+  overflow: hidden;
+  flex-basis: 40%;
 }
 
 .grid-wrapper {
@@ -68,26 +83,24 @@
   align-content: stretch;
   border: 1px solid black;
   overflow: hidden;
-  height: 17vh;
+  /* height: 25vh; */
   width: 25vw;
   flex-basis: 45%;
 }
 
 iframe {
-  display: block;
+  display: flex;
   position: absolute;
-  /* justify-content: center; */
-  /* position: relative; */
-  /* left: 60%;
-  top: 45%; */
-
+  position: relative;
 }
 
 .view {
+  /* display: flex; */
+  /* border: 1px solid black; */
   position: relative;
-  left: 82%;
+  left: 70%;
   margin: 5px;
-  width: 12vw;
+  width: 15vw;
   overflow: hidden;
   height: 4vh;
 }

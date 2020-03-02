@@ -25,6 +25,7 @@ export class MovieListComponent implements OnInit {
   emitRemove = new EventEmitter<string>();
   @Output()
   emitFavorite = new EventEmitter<string>();
+  @Output()
   filmsFavorite: any;
 
   ngOnInit() {
