@@ -41,7 +41,7 @@ export class MovieListComponent implements OnInit {
     this.emitRemove.emit(film);
     console.log(this.remove);
   }
-  favorite(film: string) {
+  addToFavorite(film: string) {
     this.emitFavorite.emit(film);
     console.log(this.favorite);
   }

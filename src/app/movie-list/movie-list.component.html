@@ -14,7 +14,7 @@
         <div class="buttonLook">
           <button mat-raised-button>Obejrzyj</button>
           <button mat-raised-button (click)="remove(film.id)">Usuń</button>
-          <button mat-raised-button (click)="favorite(film.id)">Dodaj do ulubionych</button>
+          <button mat-raised-button (click)="addToFavorite(film.id)">Dodaj do ulubionych</button>
         </div>
         <iframe width="200" height="150" [src]="film.src" frameborder="0" allowfullscreen></iframe>
       </li>
