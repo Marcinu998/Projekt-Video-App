@@ -1,0 +1,123 @@
+.displayList {
+  display: flex;
+  flex-wrap: wrap;
+  border: 4px solid black;
+  height: 450px;
+  background-color: white;
+}
+
+.tiles {
+  font-size: 20px;
+  /* width: 7vw; */
+  background-color: black;
+  color: white;
+  margin: 2px;
+}
+
+/* .buttonLook {
+  height: 20%;
+  color: teal;
+} */
+
+.list-view {
+  font-size: 20px;
+  /* width: 5vw; */
+  background-color: black;
+  color: white;
+  margin: 2px;
+  /* text-align: center; */
+}
+
+.list {
+  background-color: tomato;
+}
+
+.list-wrapper {
+  display: flex;
+  background-color: white;
+  flex-basis: 100%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+}
+
+.list-film {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgb(255, 248, 155);
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid black;
+  height: 19vh;
+  overflow: hidden;
+  flex-basis: 40%;
+}
+
+.grid-wrapper {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  height: 90%;
+  overflow: hidden;
+}
+
+.grid-film {
+  background-color: rgb(255, 248, 155);
+  padding: 10px;
+  margin: 10px;
+  display: block;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  border: 1px solid black;
+  overflow: hidden;
+  /* height: 25vh; */
+  width: 25vw;
+  flex-basis: 45%;
+}
+
+iframe {
+  display: flex;
+  position: absolute;
+  position: relative;
+}
+
+.view {
+  /* display: flex; */
+  /* border: 1px solid black; */
+  position: relative;
+  left: 70%;
+  margin: 5px;
+  width: 15vw;
+  overflow: hidden;
+  height: 4vh;
+}
+
+:host {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.list {
+  max-width: 550px;
+  margin: auto;
+}
+
+li {
+  margin-bottom: 5px;
+}

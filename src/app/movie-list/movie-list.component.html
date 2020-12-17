@@ -1,0 +1,27 @@
+<div (change)="toggleView($event)" class="displayList">
+  <div class="view">
+    <button mat-raised-button class="tiles" (click)="setDisplay('grid')">Kafelki</button>
+    <button mat-raised-button class="list-view" (click)="setDisplay('list')">Lista</button>
+  </div>
+  <ng-container *ngIf="films?.length > 0; else noTask">
+    <ul [ngClass]="[ display === 'list' ? 'list-wrapper' : 'grid-wrapper']">
+      <li *ngFor="let film of films | paginate: { itemsPerPage: 2, currentPage: p }"
+        [ngClass]="[ display === 'list' ? 'list-film' : 'grid-film']">
+        Tytuł: {{film.title}},<br>
+        Liczba odtworzeń: {{film.statistics}}, <br>
+        Liczba polubień: {{film.likeCount}}, <br>
+        Data dodania do biblioteki: {{film.createdAt}}, <br>
+        <div class="buttonLook">
+          <button mat-raised-button>Obejrzyj</button>
+          <button mat-raised-button (click)="remove(film.id)">Usuń</button>
+          <button mat-raised-button (click)="addToFavorite(film.id)">Dodaj do ulubionych</button>
+        </div>
+        <iframe width="200" height="150" [src]="film.src" frameborder="0" allowfullscreen></iframe>
+      </li>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </ul>
+  </ng-container>
+  <ng-template #noTask>
+    <p>W tym miejscu pojawią się twoje filmy.</p>
+  </ng-template>
+</div>

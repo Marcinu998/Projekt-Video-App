@@ -1,29 +1,40 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MovieService } from './app.service';
+import { Movie } from './app.interfaces';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'VideoApp';
-  newTask: string;
-  tasksList: Array<string> = [];
-  tasksFavorite: Array<string> = [];
+  films: Movie[] = [];
+  filmsFavorite: Array<string> = [];
 
-  add() {
-    this.tasksList.push(this.newTask);
-    this.newTask = '';
+  constructor(private movieService: MovieService) { }
+
+  ngOnInit() {
+    this.films = this.movieService.getFilms();
   }
 
-  remove(task: string) {
-    this.tasksList = this.tasksList.filter(e => e !== task);
+
+  add(filmId: string) {
+    this.movieService.add(filmId);
+    this.films = this.movieService.getFilms();
   }
 
-  favorite(task: string) {
-    this.tasksFavorite.push(task);
-    this.remove(task);
-
+  remove(filmId: string) {
+    this.movieService.remove(filmId);
+    this.films = this.movieService.getFilms();
   }
 
+  favorite(film: string) {
+    this.filmsFavorite.push(film);
+    this.remove(film);
+  }
+
+  // removeFavourite(filmId: Film) {
+  //   this.tasksFavorite = this.tasksFavorite.filter(film => film.id !== filmId);
+  // }
 }

@@ -1,0 +1,40 @@
+.movie {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: stretch;
+  color: rgb(255, 162, 22);
+  font-size: 25px;
+  margin: 10px;
+}
+
+.delete-videos {
+  font-size: 20px;
+  width: 20vw;
+  margin: 0px 10px;
+}
+
+label {
+  font-size: 25px;
+}
+
+select {
+  font-size: 20px;
+  width: 20vw;
+  margin: 0px 10px;
+}
+
+.movieOption {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+p {
+  display: flex;
+  font-size: 25px;
+  display: flex;
+  color: rgb(255, 162, 22);
+}

@@ -1,53 +1,15 @@
 <div class="title">Video App</div>
-
-<!-- <div id="player"> </div> -->
-<!-- <iframe id="ytplayer" type="text/html" width="720" height="405" src="https://www.youtube.com/embed/M7lc1UVf-VE"
-  frameborder="0" allowfullscreen> -->
-
-<div class="search">
-  <button (click)="add()">Dodaj Film</button>
-  <input [(ngModel)]="newTask">
+<div>
+  <app-movie-search (emitFilm)="add($event)" (emitLoadDemo)="load()"> </app-movie-search>
+  <!-- <mat-slider min="1" max="100" step="1" value="1"></mat-slider> -->
 </div>
-
-<div class="film">
-  <h1>Moje filmy</h1>
-  <button class="filterfilm">Ulubione filmy</button>
-  <button class="sortfilm">Sortuj</button>
+<div>
+  <app-my-movies [filmsRemove]="films" (emitRemoveAll)="removeAll($event)" (emitSortFilm)="sortFilm($event)">
+  </app-my-movies>
 </div>
-
 <section class="container">
-  <div class="view">
-    <button class="tiles">Kafelki</button>
-    <button class="listview">Lista</button>
-  </div>
-  <div class="display">
-    <ng-container *ngIf="tasksList.length > 0; else noTask">
-      <ul>
-        <!-- <li class="first">
-        <h1>Tytuł filmu: </h1>
-        <button>Uruchomienie filmu</button>
-        <div class="minifilm">Miniatura filmu</div>
-        <button>usunięcie filmu</button>
-        <button>dodanie do ulubionych</button>
-      </li> -->
-        <li *ngFor="let task of tasksList" class="first">Link do filmu: {{task}}
-          <button>Uruchomienie filmu</button>
-          <div class="minifilm">Miniatura Filmu</div>
-          <button (click)="remove(task)">Usuń</button>
-          <button (click)="favorite(task)">Ulubione</button>
-        </li>
-      </ul>
-    </ng-container>
-    <ng-template #noTask>
-      <p>W tym miejscu pojawią się twoje filmy.</p>
-    </ng-template>
-  </div>
-
-  <div class="favoriteList">
-    <p> Liczba ulubionych filmów: {{tasksFavorite.length}} </p>
-    <ul>
-      <li *ngFor="let task of tasksFavorite">{{task}}</li>
-    </ul>
-  </div>
-
+  <app-movie-list [films]="films" (emitRemove)="remove($event)" (emitFavorite)="favorite($event)"></app-movie-list>
 </section>
+<div class="favorite-movies">
+  <app-favorite-movies [films]="filmsFavorite" (emitRemoveFavorite)="remove($event)"></app-favorite-movies>
+</div>

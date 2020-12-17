@@ -1,0 +1,17 @@
+.search {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.add-movie {
+  font-size: 20px;
+  width: 10vw;
+  color: black;
+}
+
+input {
+  font-size: 20px;
+  width: 20vw;
+  margin: 0px 10px;
+}
